@@ -21,8 +21,9 @@ func main() {
 	defer conn.Close()
 
 	ccGreet := pb.NewGreetServiceClient(conn)
-	ccSum := pb.NewSumServiceClient(conn)
+	// ccSum := pb.NewSumServiceClient(conn)
 
-	doGreet(ccGreet)
-	doSum(ccSum)
+	// doGreet(ccGreet)
+	// doSum(ccSum)
+	doGreetManyTimes(ccGreet)
 }
