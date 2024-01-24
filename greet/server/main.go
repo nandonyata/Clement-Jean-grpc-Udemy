@@ -12,6 +12,7 @@ var address string = "localhost:3001"
 
 type Server struct {
 	pb.GreetServiceServer
+	pb.SumServiceServer
 }
 
 func main() {
@@ -25,6 +26,7 @@ func main() {
 
 	s := grpc.NewServer()
 	pb.RegisterGreetServiceServer(s, &Server{})
+	pb.RegisterSumServiceServer(s, &Server{})
 
 	if err = s.Serve(listener); err != nil {
 		log.Fatalf("Failed serve: %v\n", err)

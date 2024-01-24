@@ -20,7 +20,9 @@ func main() {
 
 	defer conn.Close()
 
-	cc := pb.NewGreetServiceClient(conn)
+	ccGreet := pb.NewGreetServiceClient(conn)
+	ccSum := pb.NewSumServiceClient(conn)
 
-	doGreet(cc)
+	doGreet(ccGreet)
+	doSum(ccSum)
 }

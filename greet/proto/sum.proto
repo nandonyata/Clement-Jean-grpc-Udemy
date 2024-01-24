@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option go_package = "github.com/nandonyata/Clement-Jean-grpc-Udemy/greet/proto";
+
+message SumRequest {
+    int32 first = 1;
+    int32 second = 2;
+}
+
+message SumResponse {
+    int32 result = 1;
+}
+
+service SumService {
+    rpc Sum (SumRequest) returns (SumResponse);
+}
