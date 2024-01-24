@@ -1,16 +1,18 @@
 syntax = "proto3";
 
+package calc;
+
 option go_package = "github.com/nandonyata/Clement-Jean-grpc-Udemy/calculator/proto";
 
 message CalculatorRequest{
-    int32 first = 1;
-    int32 second = 2;
+    int32 First = 1;
+    int32 Second = 2;
 }
 
 message CalculatorResponse{
     int32 Result = 1;
 }
 
-service calculatorService {
+service CalculatorService {
     rpc Sum(CalculatorRequest) returns (CalculatorResponse);
 }
