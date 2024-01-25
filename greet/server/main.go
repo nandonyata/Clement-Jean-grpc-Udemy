@@ -6,6 +6,7 @@ import (
 
 	pb "github.com/nandonyata/Clement-Jean-grpc-Udemy/greet/proto"
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/reflection"
 )
 
 var address string = "localhost:3001"
@@ -25,6 +26,7 @@ func main() {
 
 	s := grpc.NewServer()
 	pb.RegisterGreetServiceServer(s, &Server{})
+	reflection.Register(s)
 
 	if err = s.Serve(listener); err != nil {
 		log.Fatalf("Failed serve: %v\n", err)
