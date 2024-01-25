@@ -13,6 +13,15 @@ message CalculatorResponse{
     int32 Result = 1;
 }
 
+message SqrtRequest {
+    int32 Number = 1;
+}
+
+message SqrtResponse {
+    double Number = 1;
+}
+
 service CalculatorService {
     rpc Sum(CalculatorRequest) returns (CalculatorResponse);
+    rpc Sqrt(SqrtRequest) returns (SqrtResponse);
 }
