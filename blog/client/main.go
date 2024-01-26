@@ -21,5 +21,6 @@ func main() {
 
 	// createBlog(client)
 	// GetOneBlog(client)
-	UpdateBlog(client)
+	// UpdateBlog(client)
+	GetAllBlog(client)
 }
