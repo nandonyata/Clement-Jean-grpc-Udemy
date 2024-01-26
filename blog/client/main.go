@@ -19,5 +19,6 @@ func main() {
 	defer c.Close()
 	client := pb.NewBlogServiceClient(c)
 
-	createBlog(client)
+	// createBlog(client)
+	GetOneBlog(client)
 }
