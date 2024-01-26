@@ -22,5 +22,8 @@ func main() {
 	// createBlog(client)
 	// GetOneBlog(client)
 	// UpdateBlog(client)
-	GetAllBlog(client)
+	// GetAllBlog(client)
+	DeleteBlog(client, "000000000000000000000000")
+	DeleteBlog(client, "65b358957665261755c89c2d")
+
 }
